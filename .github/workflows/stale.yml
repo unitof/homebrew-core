@@ -26,3 +26,23 @@ jobs:
             recent activity. It will be closed if no further activity occurs.
           exempt-issue-labels: 'gsoc-outreachy,help wanted,in progress'
           exempt-pr-labels: 'gsoc-outreachy,help wanted,in progress'
+
+      - name: Close Issues with No Response
+        uses: actions/stale@v3
+        with:
+          repo-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          days-before-close: 14
+          stale-issue-label: needs response
+          stale-pr-label: needs response
+          close-issue-message: >
+            This issue has been automatically closed because there has been no response
+            to our request for more information from the original author. With only the
+            information that is currently in the issue, we don't have enough information
+            to take action. Please reach out if you have or find the answers we need so
+            that we can investigate further.
+          close-pr-message: >
+            This pull request has been automatically closed because there has been no response
+            to our request for more information from the original author. With only the
+            information that is currently in the pull request, we don't have enough information
+            to take action. Please reach out if you have or find the answers we need so
+            that we can investigate further.
