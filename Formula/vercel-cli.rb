@@ -19,8 +19,6 @@ class VercelCli < Formula
     sha256 "a52be7278a1492daa225ecd47b7326f41f60ea2070397903bc3ef09f7f6aec1a" => :high_sierra
   end
 
-  disable! date: "2021-01-31", because: :unmaintained
-
   depends_on "node"
 
   def install
