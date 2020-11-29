@@ -1,10 +1,10 @@
 require "language/node"
 
-class NowCli < Formula
-  desc "Command-line interface for Now"
-  homepage "https://zeit.co/now"
-  url "https://registry.npmjs.org/now/-/now-20.0.0.tgz"
-  sha256 "471d4fb8507b64d1caefa5a5a1433432ccf26b1a2965d9c47e88da3934320b96"
+class VercelCli < Formula
+  desc "Command-line interface for Vercel"
+  homepage "https://vercel.com/home"
+  url "https://registry.npmjs.org/vercel/-/vercel-21.0.2.tgz"
+  sha256 "c8d3eae160a892e32837db3dcae515e843e5383fef52b8141940c8bcf8b6d59f"
   license "Apache-2.0"
 
   livecheck do
@@ -26,13 +26,13 @@ class NowCli < Formula
   def install
     rm Dir["dist/{*.exe,xsel}"]
     inreplace "dist/index.js", "t.default=getUpdateCommand",
-                               "t.default=async()=>'brew upgrade now-cli'"
+                               "t.default=async()=>'brew upgrade vercel-cli'"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
-    system "#{bin}/now", "init", "jekyll"
+    system "#{bin}/vercel", "init", "jekyll"
     assert_predicate testpath/"jekyll/_config.yml", :exist?, "_config.yml must exist"
     assert_predicate testpath/"jekyll/README.md", :exist?, "README.md must exist"
   end
