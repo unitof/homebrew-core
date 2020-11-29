@@ -23,8 +23,8 @@ class VercelCli < Formula
 
   def install
     rm Dir["dist/{*.exe,xsel}"]
-    inreplace "dist/index.js", "t.default=getUpdateCommand",
-                               "t.default=async()=>'brew upgrade vercel-cli'"
+    inreplace "dist/index.js", "exports.default = getUpdateCommand",
+                               "exports.default = async()=>'brew upgrade vercel-cli'"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
