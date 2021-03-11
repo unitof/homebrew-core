@@ -19,6 +19,8 @@ class KubernetesCli < Formula
   end
 
   depends_on "go" => :build
+  depends_on "bash" => :build
+  env :std
 
   uses_from_macos "rsync" => :build
 
