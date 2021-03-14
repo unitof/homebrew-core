@@ -18,8 +18,8 @@ class KubernetesCli < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "20e9bc152b7e468fb2cc298934eac84fa606cf222d629deed4b6ad105eea3e90"
   end
 
-  depends_on "go" => :build
   depends_on "bash" => :build
+  depends_on "go" => :build
   env :std
 
   uses_from_macos "rsync" => :build
