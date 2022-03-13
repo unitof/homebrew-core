@@ -3,6 +3,7 @@ class Mp4v2 < Formula
   homepage "https://mp4v2.org"
   url "https://github.com/enzo1982/mp4v2/releases/download/v2.0.0/mp4v2-2.0.0.tar.bz2"
   sha256 "0319b9a60b667cf10ee0ec7505eb7bdc0a2e21ca7a93db96ec5bd758e3428338"
+  license "MPL-1.1"
 
   bottle do
     rebuild 1
