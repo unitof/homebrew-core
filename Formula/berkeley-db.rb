@@ -9,7 +9,7 @@ class BerkeleyDb < Formula
 
   livecheck do
     url "https://www.oracle.com/database/technologies/related/berkeleydb-downloads.html"
-    regex(/h3>Berkeley\s*DB.*\(\s*(\d+(?:\.\d+)+)\s*\)/i)
+    regex(/Berkeley\s*DB[^(]*?\(\s*v?(\d+(?:\.\d+)+)\s*\)/i)
   end
 
   bottle do
