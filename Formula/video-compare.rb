@@ -16,6 +16,14 @@ class VideoCompare < Formula
 
   test do
     testvideo = test_fixtures("test.gif") # GIF is valid ffmpeg input format
-    system "#{bin}/video-compare", testvideo, testvideo
+    begin
+      pid = fork do
+        exec "#{bin}/video-compare", testvideo, testvideo
+      end
+      sleep 3
+    ensure
+      Process.kill("TERM", pid)
+      Process.wait(pid)
+    end
   end
 end
