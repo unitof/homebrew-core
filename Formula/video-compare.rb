@@ -15,7 +15,7 @@ class VideoCompare < Formula
   end
 
   test do
-    output = shell_output("#{bin}/video-compare 2>&1")
-    assert_match "Usage: ", output
+    testvideo = test_fixtures("test.gif") # GIF is valid ffmpeg input format
+    system "#{bin}/video-compare", testvideo, testvideo
   end
 end
