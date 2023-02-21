@@ -2,8 +2,8 @@ class Gyb < Formula
   include Language::Python::Virtualenv
   desc "CLI for backing up and restoring Gmail messages"
   homepage "https://github.com/GAM-team/got-your-back/"
-  url "https://github.com/GAM-team/got-your-back/archive/v1.72.tar.gz"
-  sha256 "752f6b40cfa8831bd10c14d1aa1af278a310600b9bb887d807bb514261d28f12"
+  url "https://github.com/GAM-team/got-your-back/archive/v1.73.tar.gz"
+  sha256 "a8c521325a96907916dfc6d24651312c8abe57215b084a94635165c7052ed76d"
   license "Apache-2.0"
   head "https://github.com/GAM-team/got-your-back.git", branch: "main"
 
