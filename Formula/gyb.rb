@@ -139,13 +139,13 @@ class Gyb < Formula
   end
 
   def install
-    # change config dir from default of executable's path
+    print buildpath
+    # change user config location from default of executable own path
     inreplace "gyb.py", "default=getProgPath()",
                         "default='#{pkgetc}'"
-    venv = virtualenv_create(libexec, "python3")
+    venv = virtualenv_create(buildpath, "python3")
     venv.pip_install resources
-    system libexec/"bin/python3", "-m", "PyInstaller", "gyb.spec"
-    rm_rf libexec # only needed for build; PyInstaller bundles everything into binary
+    system buildpath/"bin/python3", "-m", "PyInstaller", "gyb.spec"
     bin.install "dist/gyb"
   end
 
