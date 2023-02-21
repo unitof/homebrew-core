@@ -5,6 +5,7 @@ class Gyb < Formula
   url "https://github.com/GAM-team/got-your-back/archive/v1.72.tar.gz"
   sha256 "752f6b40cfa8831bd10c14d1aa1af278a310600b9bb887d807bb514261d28f12"
   license "Apache-2.0"
+  head "https://github.com/GAM-team/got-your-back.git", branch: "main"
 
   depends_on "rust" => :build # for cryptography
   depends_on "python@3.11"
