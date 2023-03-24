@@ -17,6 +17,6 @@ class ImessageExporter < Formula
 
   test do
     assert_match version.to_s, shell_output(bin/"imessage-exporter --version")
-    assert_match "Unable to launch", shell_output(bin/"imessage-exporter --diagnostics")
+    assert_match "Unable to launch", shell_output(bin/"imessage-exporter --diagnostics 2>&1")
   end
 end
