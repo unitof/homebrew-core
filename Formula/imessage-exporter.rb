@@ -11,7 +11,7 @@ class ImessageExporter < Formula
     # manifest set to 0.0.0 for some reason, matching upstream build behavior
     # https://github.com/ReagentX/imessage-exporter/blob/develop/build.sh
     inreplace "imessage-exporter/Cargo.toml", "version = \"0.0.0\"",
-                                              "version = \"#{version.to_s}\""
+                                              "version = \"#{version}\""
     system "cargo", "install", *std_cargo_args(path: "imessage-exporter")
   end
 
