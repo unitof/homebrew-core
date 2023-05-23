@@ -82,6 +82,8 @@ class YtFts < Formula
 
   def install
     virtualenv_install_with_resources
+    bin.install_symlink bin/"yt_fts.py" => "yt-fts"
+    prefix.install libexec/"share"
   end
 
   test do
