@@ -3,8 +3,8 @@ class Manim < Formula
 
   desc "Animation engine for explanatory math videos"
   homepage "https://www.manim.community"
-  url "https://files.pythonhosted.org/packages/6e/ee/281ccf843f15700fa2221334ac7590627496a4d6645da2dcf150450628ec/manim-0.17.2.tar.gz"
-  sha256 "cb9b6f8b27c07994b929f2ab1943a3f5a6767816391744bb0f64f998dd99ecfe"
+  url "https://files.pythonhosted.org/packages/58/52/b0c544b1127a60e779390c803cb731570068ec6def82e7e0423030587f2c/manim-0.17.3.tar.gz"
+  sha256 "f9c7b56aef79989c503e71d6d3aebe65a9400b421e7af8f917d2df1fb157b813"
   license "MIT"
   head "https://github.com/manimCommunity/manim.git", branch: "main"
 
