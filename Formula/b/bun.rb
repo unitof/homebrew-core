@@ -2,12 +2,13 @@ class Bun < Formula
   desc "Fast all-in-one JavaScript runtime"
   homepage "https://bun.sh"
   license "MIT"
+  version "1.0.0"
 
   stable do
     # pull from git tag to get submodules
     url "https://github.com/oven-sh/bun.git",
-      tag:      "bun-v0.1.6",
-      revision: "fcce3ff5ac821de270e5d0094d665ec079ef205e"
+      tag:      "bun-v1.0.0",
+      revision: "822a00c4d508b54f650933a73ca5f4a3af9a7983"
 
     # Requires unreleased zig version (0.10.0)
     # Commit from latest fork: https://github.com/Jarred-Sumner/zig
@@ -19,7 +20,7 @@ class Bun < Formula
 
   livecheck do
     url :stable
-    regex(/bun-v?(\d+(?:\.\d+)+)/i)
+    strategy :github_latest
   end
 
   head do
