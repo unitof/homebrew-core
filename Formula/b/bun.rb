@@ -1,5 +1,5 @@
 class Bun < Formula
-  desc "Fast all-in-one JavaScript runtime"
+  desc "All-in-one JavaScript runtime, bundler, transpiler, and package manager"
   homepage "https://bun.sh"
   license "MIT"
   version "1.0.0"
