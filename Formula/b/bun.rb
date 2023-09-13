@@ -31,16 +31,19 @@ class Bun < Formula
     end
   end
 
-  depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "ccache" => :build
   depends_on "cmake" => :build
+  depends_on "coreutils" => :build
   depends_on "esbuild" => :build
   depends_on "gnu-sed" => :build
-  depends_on "go" => :build
+  depends_on "libiconv" => :build
   depends_on "libtool" => :build
-  depends_on "llvm@13" => :build
+  depends_on "llvm@15" => :build
   depends_on "ninja" => :build
-  depends_on "node" => :build
+  depends_on "openssl@1.1" => :build
+  depends_on "pkg-config" => :build
+  depends_on "pkg-config" => :build
   depends_on "rust" => :build
 
   def install
