@@ -19,34 +19,19 @@ class Manim < Formula
     depends_on "scipy"
   end
 
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/71/da/e94e26401b62acd6d91df2b52954aceb7f561743aa5ccc32152886c76c96/certifi-2024.2.2.tar.gz"
-    sha256 "0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f"
-  end
-
-  resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
-    sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
-  end
-
   resource "click" do
     url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
     sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
   end
 
-  resource "click-default-group" do
-    url "https://files.pythonhosted.org/packages/1d/ce/edb087fb53de63dad3b36408ca30368f438738098e668b78c87f93cd41df/click_default_group-1.2.4.tar.gz"
-    sha256 "eb3f3c99ec0d456ca6cd2a7f08f7d4e91771bef51b01bdd9580cc6450fe1251e"
-  end
-
   resource "cloup" do
-    url "https://files.pythonhosted.org/packages/71/b6/2819a7290c0f5bf384be3f507f2cfbc0a93a8148053d0bde2040d2e09124/cloup-2.1.2.tar.gz"
-    sha256 "43f10e944056f3a1eea714cb67373beebebbefc3f4551428750392f3e04ac964"
+    url "https://files.pythonhosted.org/packages/e4/95/1cdc36a95ffb2a48542b7439d5a7ba6cba0fa90208be913c01edcf267ca5/cloup-3.0.4.tar.gz"
+    sha256 "658111e2f49b8256a822dac5fa0205bf64109fdefc435f39923490a32b13ec09"
   end
 
-  resource "cython" do
-    url "https://files.pythonhosted.org/packages/0e/17/c5b026cea7a634ee3b8950a7be16aaa49deeb3b9824ba5e81c13ac26f3c4/Cython-3.0.9.tar.gz"
-    sha256 "a2d354f059d1f055d34cfaa62c5b68bc78ac2ceab6407148d47fb508cf3ba4f3"
+  resource "Cython" do
+    url "https://files.pythonhosted.org/packages/68/09/ffb61f29b8e3d207c444032b21328327d753e274ea081bc74e009827cc81/Cython-3.0.8.tar.gz"
+    sha256 "8333423d8fd5765e7cceea3a9985dd1e0a5dfeb2734629e1a2ed2d6233d39de6"
   end
 
   resource "decorator" do
@@ -59,17 +44,17 @@ class Manim < Formula
     sha256 "0f70d4be0cdd2b532a16da76c8f786b6367754a4086aaadffdbf3e37badbad02"
   end
 
-  resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
-  end
-
   resource "isosurfaces" do
     url "https://files.pythonhosted.org/packages/88/b6/765e74b3ce5b40cf21b95eef7e60c7755314538908287ec2d0767b17bd2d/isosurfaces-0.1.0.tar.gz"
     sha256 "fa1b44e5e59d2f429add49289ab89e36f8dcda49b7badd99e0beea273be331f4"
   end
 
-  resource "manimpango" do
+  resource "manim" do
+    url "https://files.pythonhosted.org/packages/06/62/7802597b93048a8ab543d835338739ce8f4e96e0410b63e29c86deb7cceb/manim-0.18.0.tar.gz"
+    sha256 "56788066bc1aec2471a988c91e337194fd38d1035ed1b4d10838bfe64bd26af8"
+  end
+
+  resource "ManimPango" do
     url "https://files.pythonhosted.org/packages/48/5b/d1249c3d90324a1d4dce4711e507c8ec87addca61d1304ffa55513783ba3/ManimPango-0.5.0.tar.gz"
     sha256 "299913bbccb0f15954b64401cf9df24607e1a01edda589ea77de1ed4cc2bc284"
   end
@@ -95,8 +80,8 @@ class Manim < Formula
   end
 
   resource "moderngl-window" do
-    url "https://files.pythonhosted.org/packages/c2/90/14a7e798c9310dfa5ee94716d0b73f465780741ae6c9d45eb21626d87bf6/moderngl-window-2.4.4.tar.gz"
-    sha256 "66a9c5412b5eb0a5ca7cda351e4484ce02a167cf87eb4dc59bb82439c58130b5"
+    url "https://files.pythonhosted.org/packages/f8/06/c47b5101242189d75ca2a37e74f4c833a48872678fb097741f02b06c659b/moderngl-window-2.4.1.tar.gz"
+    sha256 "691de764640b87af3d851257be544e1cafddb9cfa47cb144d0c1f1a0ed0a3936"
   end
 
   resource "multipledispatch" do
@@ -110,18 +95,18 @@ class Manim < Formula
   end
 
   resource "numpy" do
-    url "https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz"
-    sha256 "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010"
+    url "https://files.pythonhosted.org/packages/d0/b0/13e2b50c95bfc1d5ee04925eb5c105726c838f922d0aaddd57b7c8be0f8b/numpy-1.26.3.tar.gz"
+    sha256 "697df43e2b6310ecc9d95f05d5ef20eacc09c7c4ecc9da3f235d39e71b7da1e4"
   end
 
   resource "pillow" do
-    url "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz"
-    sha256 "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
+    url "https://files.pythonhosted.org/packages/f8/3e/32cbd0129a28686621434cbf17bb64bf1458bfb838f1f668262fefce145c/pillow-10.2.0.tar.gz"
+    sha256 "e87f0b2c78157e12d7686b27d63c070fd65d994e8ddae6f328e0dcf4a0cd007e"
   end
 
   resource "pycairo" do
-    url "https://files.pythonhosted.org/packages/1c/41/91955188e97c7b85fbaac6bbf4e33de028899e0aa31bdce99b1afe2eeb17/pycairo-1.26.0.tar.gz"
-    sha256 "2dddd0a874fbddb21e14acd9b955881ee1dc6e63b9c549a192d613a907f9cbeb"
+    url "https://files.pythonhosted.org/packages/c7/7c/de4d40316ee563e4f15a0f05f28c8458833fbef80c4588b9dd51f39b78ee/pycairo-1.25.1.tar.gz"
+    sha256 "7e2be4fbc3b4536f16db7a11982cbf713e75069a4d73d44fe5a49b68423f5c0c"
   end
 
   resource "pydub" do
@@ -130,11 +115,11 @@ class Manim < Formula
   end
 
   resource "pyglet" do
-    url "https://files.pythonhosted.org/packages/f5/fa/9b701ace19219b38dca47926a500dafa9f37cf33c7935e699c9218b35062/pyglet-2.0.14.tar.gz"
-    sha256 "9b3bef1532395d88600db115b2eea8c345d2851be48ad8ac64b152b16f089777"
+    url "https://files.pythonhosted.org/packages/05/e8/8db7a61dbb2fe7e1f060f0592ad339036809cd255c5c5ece6d9a8dad43ff/pyglet-1.5.28.zip"
+    sha256 "68bff532226b0e8f54dfcc2f6df7d0e463b451fae97fe9fa4af4131d34afbc00"
   end
 
-  resource "pygments" do
+  resource "Pygments" do
     url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
     sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
   end
@@ -144,7 +129,7 @@ class Manim < Formula
     sha256 "1844f1c8e282839e6fdcb9a9722396c1c12fb1e9331eb68828a26f28a3b2b2b1"
   end
 
-  resource "pyobjc-framework-cocoa" do
+  resource "pyobjc-framework-Cocoa" do
     url "https://files.pythonhosted.org/packages/5d/1d/964a0da846d49511489bd99ed705f9d85c5081fc832d0dba384c4c0d2fb2/pyobjc-framework-Cocoa-10.1.tar.gz"
     sha256 "8faaf1292a112e488b777d0c19862d993f3f384f3927dc6eca0d8d2221906a14"
   end
@@ -154,14 +139,9 @@ class Manim < Formula
     sha256 "3c0f7b20326e71f706a610d58f2190fff73af01eef60c19cb188b186f0ec7e1d"
   end
 
-  resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
-  end
-
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/b3/01/c954e134dc440ab5f96952fe52b4fdc64225530320a910473c1fe270d9aa/rich-13.7.1.tar.gz"
-    sha256 "9be308cb1fe2f1f57d67ce99e95af38a1e2bc71ad9813b0e247cf7ffbcc3a432"
+    url "https://files.pythonhosted.org/packages/a7/ec/4a7d80728bd429f7c0d4d51245287158a1516315cadbb146012439403a9d/rich-13.7.0.tar.gz"
+    sha256 "5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"
   end
 
   resource "scipy" do
@@ -175,8 +155,8 @@ class Manim < Formula
   end
 
   resource "skia-pathops" do
-    url "https://files.pythonhosted.org/packages/0c/9c/402e16ae956a10d56fe1ab9969136f92e043f8fafdbb3a63ed00b5c43ad0/skia-pathops-0.7.4.zip"
-    sha256 "0a2fdee87b7adb018cbfa6e95ef9e4299ed63b0080be27677a30ffefbca91350"
+    url "https://files.pythonhosted.org/packages/37/15/fa6de52d9cb3a44158431d4cce870e7c2a56cdccedc8fa1262cbf61d4e1e/skia-pathops-0.8.0.post1.zip"
+    sha256 "a056249de2f61fa55116b9ee55513c6a36b878aee00c91450e404d1606485cbb"
   end
 
   resource "srt" do
@@ -190,18 +170,13 @@ class Manim < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
-    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
+    url "https://files.pythonhosted.org/packages/62/06/d5604a70d160f6a6ca5fd2ba25597c24abd5c5ca5f437263d177ac242308/tqdm-4.66.1.tar.gz"
+    sha256 "d88e651f9db8d8551a62556d3cff9e3034274ca5d66e93197cf2490e2dcb69c7"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
-  end
-
-  resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
   end
 
   resource "watchdog" do
