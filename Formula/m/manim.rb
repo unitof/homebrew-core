@@ -12,7 +12,7 @@ class Manim < Formula
   depends_on "ninja" => :build
   depends_on "ffmpeg"
   depends_on "py3cairo"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
 
   on_arm do
     depends_on "pango"
