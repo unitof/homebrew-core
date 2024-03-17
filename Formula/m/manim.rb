@@ -187,10 +187,12 @@ class Manim < Formula
   def install
     venv = virtualenv_create(libexec, "python3.12")
 
-    # pyglet@1.5.28 contains error in pyproject.toml, causing build error: `TypeError: expected str, bytes or os.PathLike object, not list`
+    # pyglet@1.5.28 contains malformed pyproject.toml
     # See https://github.com/pyglet/pyglet/issues/999
     resource("pyglet").stage do
       inreplace "pyproject.toml", 'build-backend = ["flit_core.buildapi", "flit_core.wheel"]', 'build-backend = "flit_core.buildapi"'
+      inreplace "pyproject.toml", '[tool.flit.metadata]', "\\1\ndynamic = [\"version\", \"description\"]"
+
       venv.pip_install_and_link Pathname.pwd
     end
 
