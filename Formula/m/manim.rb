@@ -191,7 +191,12 @@ class Manim < Formula
     # See https://github.com/pyglet/pyglet/issues/999
     resource("pyglet").stage do
       inreplace "pyproject.toml", 'build-backend = ["flit_core.buildapi", "flit_core.wheel"]', 'build-backend = "flit_core.buildapi"'
-      inreplace "pyproject.toml", '[tool.flit.metadata]', "\\1\ndynamic = [\"version\", \"description\"]"
+      inreplace "pyproject.toml", "[tool.flit.metadata", "[project"
+      inreplace "pyproject.toml", 'module = "pyglet"', 'name = "pyglet"'
+      inreplace "pyproject.toml", "[project]\n", "\\0dynamic = [\"version\", \"description\"]\n"
+
+      puts "DEBUG pyproject.toml:"
+      puts File.read("pyproject.toml") #debug
 
       venv.pip_install_and_link Pathname.pwd
     end
