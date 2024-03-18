@@ -201,10 +201,18 @@ class Manim < Formula
       puts "DEBUG pyproject.toml:"
       puts File.read("pyproject.toml") #debug
 
-      venv.pip_install_and_link Pathname.pwd
+      venv.pip_install Pathname.pwd
     end
 
-    venv.pip_install resources.reject { |r| r.name == "pyglet" }
+    resources.reject { |r| r.name == "pyglet" }.each do |r|
+      # ansible-core provides all ansible binaries
+      if r.name == "manim"
+        venv.pip_install_and_link r
+      else
+        venv.pip_install r
+      end
+    end
+
     venv.pip_install_and_link buildpath
   end
 
