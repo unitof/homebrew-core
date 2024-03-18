@@ -10,6 +10,7 @@ class Manim < Formula
 
   depends_on "cython" => :build
   depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
   depends_on "cairo" # for cairo.h
   depends_on "ffmpeg"
   depends_on "py3cairo"
