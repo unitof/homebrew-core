@@ -210,35 +210,7 @@ class Manim < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.12")
-
-    # pyglet@1.5.28 contains malformed pyproject.toml & version definition
-    # See https://github.com/pyglet/pyglet/issues/999
-    resource("pyglet").stage do
-      inreplace "pyglet/__init__.py", "version = '1.5.28'", "\\0\n__version__ = version"
-      inreplace "pyproject.toml", 'build-backend = ["flit_core.buildapi", "flit_core.wheel"]', 'build-backend = "flit_core.buildapi"'
-      inreplace "pyproject.toml", "[tool.flit.metadata", "[project"
-      inreplace "pyproject.toml", "author = \"Alex Holkner\"\nauthor-email = \"alex.holkner@gmail.com\"", 'authors = [{name = "Alex Holkner & contributors", email = "Alex.Holkner@gmail.com"}]'
-      inreplace "pyproject.toml", "license='BSD'", 'license = {file = "LICENSE"}'
-      inreplace "pyproject.toml", 'module = "pyglet"', 'name = "pyglet"'
-      inreplace "pyproject.toml", "[project]\n", "\\0dynamic = [\"version\", \"description\"]\n"
-
-      puts "DEBUG pyproject.toml:"
-      puts File.read("pyproject.toml") #debug
-
-      venv.pip_install Pathname.pwd
-    end
-
-    resources.reject { |r| r.name == "pyglet" }.each do |r|
-      # ansible-core provides all ansible binaries
-      if r.name == "manim"
-        venv.pip_install_and_link r
-      else
-        venv.pip_install r
-      end
-    end
-
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources
   end
 
   test do
