@@ -16,6 +16,10 @@ class Manim < Formula
   depends_on "py3cairo"
   depends_on "python@3.12"
 
+  on_linux do
+    depends_on "cmake" => :build
+  end
+
   on_arm do
     depends_on "pango"
     depends_on "scipy"
