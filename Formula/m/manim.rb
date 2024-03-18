@@ -17,6 +17,7 @@ class Manim < Formula
   depends_on "python@3.12"
 
   on_linux do
+    depends_on "autoconf" => :build
     depends_on "cmake" => :build
   end
 
