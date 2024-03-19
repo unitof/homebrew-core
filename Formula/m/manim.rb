@@ -8,11 +8,11 @@ class Manim < Formula
   license "MIT"
   head "https://github.com/manimCommunity/manim.git", branch: "main"
 
-  depends_on "certifi" => :build
   depends_on "cython" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "cairo" # for cairo.h
+  depends_on "certifi"
   depends_on "ffmpeg"
   depends_on "numpy"
   depends_on "pillow"
