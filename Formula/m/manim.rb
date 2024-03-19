@@ -13,6 +13,7 @@ class Manim < Formula
   depends_on "pkg-config" => :build
   depends_on "cairo" # for cairo.h
   depends_on "ffmpeg"
+  depends_on "numpy"
   depends_on "py3cairo"
   depends_on "python-setuptools" # for `import pkg_resources`
   depends_on "python@3.12"
@@ -125,11 +126,6 @@ class Manim < Formula
   resource "networkx" do
     url "https://files.pythonhosted.org/packages/c4/80/a84676339aaae2f1cfdf9f418701dd634aef9cc76f708ef55c36ff39c3ca/networkx-3.2.1.tar.gz"
     sha256 "9f1bb5cf3409bf324e0a722c20bdb4c20ee39bf1c30ce8ae499c8502b0b5e0c6"
-  end
-
-  resource "numpy" do
-    url "https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz"
-    sha256 "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010"
   end
 
   resource "pillow" do
