@@ -14,6 +14,7 @@ class Manim < Formula
   depends_on "cairo" # for cairo.h
   depends_on "ffmpeg"
   depends_on "py3cairo"
+  depends_on "python-setuptools" # for `import pkg_resources`
   depends_on "python@3.12"
 
   on_linux do
