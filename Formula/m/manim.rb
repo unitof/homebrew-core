@@ -17,7 +17,6 @@ class Manim < Formula
   depends_on "numpy"
   depends_on "pillow"
   depends_on "py3cairo"
-  depends_on "pygments"
   depends_on "python-setuptools" # for `import pkg_resources`
   depends_on "python-typing-extensions"
   depends_on "python@3.12"
@@ -129,6 +128,11 @@ class Manim < Formula
   resource "pyglet" do
     url "https://files.pythonhosted.org/packages/f5/fa/9b701ace19219b38dca47926a500dafa9f37cf33c7935e699c9218b35062/pyglet-2.0.14.tar.gz"
     sha256 "9b3bef1532395d88600db115b2eea8c345d2851be48ad8ac64b152b16f089777"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
   end
 
   resource "pyobjc-core" do
