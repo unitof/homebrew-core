@@ -11,6 +11,7 @@ class GitSim < Formula
   license any_of: ["GPL-2.0-or-later", "MIT"] # Update based on response to https://github.com/initialcommit-com/git-sim/issues/103
 
   depends_on "manim"
+  depends_on "rust" => :build
   depends_on "python@3.12" => :build # opencv uses pkgutil.ImpImporter
   depends_on "python"
   depends_on "opencv"
