@@ -13,6 +13,7 @@ class GitSim < Formula
   depends_on "manim"
   depends_on "python@3.12" => :build # opencv uses pkgutil.ImpImporter
   depends_on "python"
+  depends_on "opencv"
 
   resource "annotated-types" do
     url "https://files.pythonhosted.org/packages/67/fe/8c7b275824c6d2cd17c93ee85d0ee81c090285b6d52f4876ccc47cf9c3c4/annotated_types-0.6.0.tar.gz"
@@ -32,11 +33,6 @@ class GitSim < Formula
   resource "gitpython" do
     url "https://files.pythonhosted.org/packages/8f/12/71a40ffce4aae431c69c45a191e5f03aca2304639264faf5666c2767acc4/GitPython-3.1.42.tar.gz"
     sha256 "2d99869e0fef71a73cbd242528105af1d6c1b108c60dfabd994bf292f76c3ceb"
-  end
-
-  resource "opencv-python-headless" do
-    url "https://files.pythonhosted.org/packages/3d/b2/c308bc696bf5d75304175c62222ec8af9a6d5cfe36c14f19f15ea9d1a132/opencv-python-headless-4.9.0.80.tar.gz"
-    sha256 "71a4cd8cf7c37122901d8e81295db7fb188730e33a0e40039a4e59c1030b0958"
   end
 
   resource "pydantic" do
