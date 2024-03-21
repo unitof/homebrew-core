@@ -10,11 +10,11 @@ class GitSim < Formula
   sha256 "68af9ab42816b5a9e28e96d2635bd09e608018506416abd8a1f693030fad2fa5"
   license any_of: ["GPL-2.0-or-later", "MIT"] # Update based on response to https://github.com/initialcommit-com/git-sim/issues/103
 
-  depends_on "manim"
+  depends_on "python@3.12" => :build
   depends_on "rust" => :build
-  depends_on "python@3.12" => :build # opencv uses pkgutil.ImpImporter
-  depends_on "python"
+  depends_on "manim"
   depends_on "opencv"
+  depends_on "python"
   depends_on "python-typing-extensions"
 
   resource "annotated-types" do
