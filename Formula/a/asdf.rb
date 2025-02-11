@@ -27,6 +27,16 @@ class Asdf < Formula
     generate_completions_from_executable(bin/"asdf", "completion")
   end
 
+  def caveats
+    <<~EOS
+      By default, asdf installs packages shims to:
+
+        $HOME/.asdf/shims
+
+      You may wish to add this directory to the beginning of your PATH.
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/asdf version")
     assert_match "No plugins installed", shell_output("#{bin}/asdf plugin list 2>&1")
